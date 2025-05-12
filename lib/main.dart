@@ -3,6 +3,7 @@ import 'package:flutter_b19/asset_image.dart';
 
 import 'list_view_demo.dart';
 import 'login.dart';
+import 'multiple_selection_demo.dart';
 import 'network_image.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ListViewDemo(),
+      home: MultipleSelectionDemo(),
     );
   }
 }
