@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_b19/asset_image.dart';
+import 'package:flutter_b19/page_view_demo.dart';
 
 import 'dynamic_list_view.dart';
 import 'list_view_demo.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: DynamicListView(),
+      home: PageViewDemo(),
     );
   }
 }
