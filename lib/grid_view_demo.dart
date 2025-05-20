@@ -13,7 +13,10 @@ class GridViewDemo extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 12.0),
         child: GridView.builder(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2, crossAxisSpacing: 10, mainAxisSpacing: 10,childAspectRatio: 3),
+                crossAxisCount: 2,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
+                childAspectRatio: 3),
             itemBuilder: (context, i) {
               return Container(
                 height: 60,
@@ -21,15 +24,15 @@ class GridViewDemo extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: Colors.blue.withOpacity(0.5),
                     borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: Colors.blue,width: 3)
-                ),
+                    border: Border.all(color: Colors.blue, width: 3)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Icon(Icons.add),
                     Text("All"),
                     Icon(Icons.add),
-                  ],),
+                  ],
+                ),
               );
             }),
       ),
