@@ -3,6 +3,7 @@ import 'package:flutter_b19/asset_image.dart';
 import 'package:flutter_b19/bottom_bar.dart';
 import 'package:flutter_b19/date_picker.dart';
 import 'package:flutter_b19/page_view_demo.dart';
+import 'package:flutter_b19/screen_a.dart';
 import 'package:flutter_b19/tabbar.dart';
 import 'package:flutter_b19/time_picker.dart';
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: TimePickerDemo(),
+      home: ScreenA(),
     );
   }
 }
