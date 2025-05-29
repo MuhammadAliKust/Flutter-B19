@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_b19/providers/user.dart';
+import 'package:provider/provider.dart';
 
 class ScreenB extends StatelessWidget {
-  final String name;
-  final String email;
-  const ScreenB({super.key, required this.name, required this.email});
-
   @override
   Widget build(BuildContext context) {
+    var userProvider = Provider.of<UserProvider>(context);
     return Scaffold(
       appBar: AppBar(
         leading: SizedBox(),
@@ -15,12 +14,21 @@ class ScreenB extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Text(name.toString(),style: TextStyle(fontSize: 50),),
-          Text(email.toString(),style: TextStyle(fontSize: 50),),
+          Text(
+            userProvider.getName().toString(),
+            style: TextStyle(fontSize: 50),
+          ),
+ Text(
+            userProvider.getEmail().toString(),
+            style: TextStyle(fontSize: 50),
+          ),
+
           Center(
-            child: ElevatedButton(onPressed: () {
-              Navigator.pop(context);
-            }, child: Text("Go back to Screen A")),
+            child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text("Go back to Screen A")),
           ),
         ],
       ),
